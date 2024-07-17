@@ -7,19 +7,9 @@ import {  Router } from '@angular/router';
 })
 export class HomePage implements OnInit {
 
-  isLoading: boolean = true;
-
-  constructor(private router : Router) { }
+  constructor() { }
 
   ngOnInit() {
-    this.initializeLoader()
-  }
-
-  initializeLoader() {
-
-    setTimeout(() => {
-      this.isLoading = false; 
-    }, 2000);
   }
 
 }

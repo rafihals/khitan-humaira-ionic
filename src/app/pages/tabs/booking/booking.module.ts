@@ -5,8 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { BookingPageRoutingModule } from './booking-routing.module';
-
 import { BookingPage } from './booking.page';
+import { LoaderComponent } from 'src/app/html-service/loader/loader.component';
 
 @NgModule({
   imports: [
@@ -15,6 +15,6 @@ import { BookingPage } from './booking.page';
     IonicModule,
     BookingPageRoutingModule
   ],
-  declarations: [BookingPage]
+  declarations: [BookingPage,LoaderComponent]
 })
 export class BookingPageModule {}
