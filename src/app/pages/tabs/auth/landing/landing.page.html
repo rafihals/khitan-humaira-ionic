@@ -1,0 +1,52 @@
+<ion-content>
+
+  <body class="welcome">
+    <div class="liquid">
+      <img src="/assets/img/Layer_3.png" alt="liquid" class="liquid-img">
+    </div>
+    <span id="splash-overlay" class="splash"></span>
+    <span id="welcome"></span>
+    <div class="wrapper">
+      <img *ngIf="showButtonIn" src="/assets/icon/1.png" alt="Logo" class="logo" @fadeInFromBottom>
+    </div>
+    <div class="wrapper-text" *ngIf="showMainText" @fadeInText>
+      <p>Selamat datang di</p>
+    </div>
+    <div class="main-text-1" *ngIf="showMainText" @fadeInText>
+      Griya
+    </div>
+    <div class="main-text" *ngIf="showMainText" @fadeInText>
+      Khitan Humaira
+    </div>
+    <div style="margin-left: 20px; margin-top: 30px;" *ngIf="showSuntik" @fadeInText>
+      <div class="main-text-2">
+        <a class="ko">Sunat modern tanpa suntik </a>
+      </div>
+    </div>
+    <div class="btn-wrapper" *ngIf="showButton" @fadeInText>
+      <button class="btn btn-12" (click)="onNavigateHome()">Masuk</button>
+    </div>
+    <div class="sosmed" *ngIf="showFollow" @fadeInText>
+      <div class="shareArticle">
+        <div class="shareSocial">
+          <p class="follow">Follow us :</p>
+          <ul class="socialList">
+            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copy-wrapper">
+      <div class="copy" *ngIf="showCopy" @fadeInText>
+        <p class="year">© {{currentYear}} Griya Khitan Humaira. All Rights Reserved.</p>
+      </div>
+    </div>
+    <div class="liquid2" *ngIf="showLiquid">
+      <img src="/assets/img/Layer_3.png" alt="liquid2" class="liquid-img2">
+    </div>
+  </body>
+</ion-content>

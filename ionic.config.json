@@ -1,0 +1,7 @@
+{
+  "name": "khitan-humaira-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
