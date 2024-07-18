@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookingPage implements OnInit {
 
+  isLoading: boolean = true;
+
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1500);
   }
 
 }

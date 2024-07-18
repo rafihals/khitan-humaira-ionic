@@ -4,10 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { FormPageRoutingModule } from './form-routing.module';
 import { FormPage } from './form.page';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';import { MatStepperModule } from '@angular/material/stepper';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { HtmlModule } from '../../../modules/html/html.module';
 
 @NgModule({
   
@@ -17,13 +14,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     IonicModule,
     FormPageRoutingModule,
     ReactiveFormsModule,
-    MatStepperModule,
-    MatButtonModule,
-    MatInputModule,
-    MatIconModule,
-    NgxChartsModule
-
+    HtmlModule,
   ],
-  declarations: [FormPage]
+  declarations: [FormPage,],
 })
 export class FormPageModule {}

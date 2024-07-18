@@ -6,15 +6,17 @@ import { IonicModule } from '@ionic/angular';
 
 import { BookingPageRoutingModule } from './booking-routing.module';
 import { BookingPage } from './booking.page';
-import { LoaderComponent } from 'src/app/html-service/loader/loader.component';
+
+import { HtmlModule } from '../../../modules/html/html.module';
 
 @NgModule({
   imports: [
+    HtmlModule,
     CommonModule,
     FormsModule,
     IonicModule,
     BookingPageRoutingModule
   ],
-  declarations: [BookingPage,LoaderComponent]
+  declarations: [BookingPage,]
 })
 export class BookingPageModule {}
