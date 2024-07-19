@@ -37,8 +37,8 @@ export class HeaderComponent implements OnInit {
       case 'form':
         this.pageTitle = 'Form';
         break;
-      case 'settings':
-        this.pageTitle = 'Settings';
+      case 'notif':
+        this.pageTitle = 'Notif';
         break;
       default:
         this.pageTitle = 'Default Title';

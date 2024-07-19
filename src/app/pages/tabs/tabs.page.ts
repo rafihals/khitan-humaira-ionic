@@ -55,7 +55,7 @@ export class TabsPage implements OnInit, AfterViewInit {
     }else if (index === 3){
       this.router.navigate(['/tabs/testimonial']);
     }else if (index === 4){
-      this.router.navigate(['/tabs/settings']);
+      this.router.navigate(['/tabs/notif']);
     }
     event.preventDefault();
     const target = event.currentTarget as HTMLElement;
@@ -87,7 +87,7 @@ export class TabsPage implements OnInit, AfterViewInit {
     if (url.includes('/form')) return 1;
     if (url.includes('/home')) return 2;
     if (url.includes('/testimonial')) return 3;
-    if (url.includes('/settings')) return 4;
+    if (url.includes('/notif')) return 4;
     return -1;
   }
 

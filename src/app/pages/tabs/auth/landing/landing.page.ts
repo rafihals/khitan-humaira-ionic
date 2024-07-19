@@ -1,25 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { onFadeInAnimation, onFadeInBottom } from '../../../../modules/animation/animation';
 
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.page.html',
   styleUrls: ['./landing.page.scss'],
-  animations: [
-    trigger('fadeInFromBottom', [
-      state('void', style({ opacity: 0, transform: 'translateY(50px)' })),
-      transition(':enter', [
-        animate('1000ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
-      ])
-    ]),
-    trigger('fadeInText', [
-      state('void', style({ opacity: 0, transform: 'translateY(50px)' })),
-      transition(':enter', [
-        animate('1000ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
-      ])
-    ])
-  ]
+  animations: [onFadeInAnimation(), onFadeInBottom()],
 })
 export class LandingPage implements OnInit {
 

@@ -17,16 +17,16 @@ const routes: Routes = [
         loadChildren: () => import('./form/form.module').then(m => m.FormPageModule)
       },
       {
-        path: 'settings',
-        loadChildren: () => import('./settings/settings.module').then(m => m.SettingsPageModule)
-      },
-      {
         path: 'testimonial',
         loadChildren: () => import('./testimonial/testimonial.module').then( m => m.TestimonialPageModule)
       },
       {
         path: 'booking',
         loadChildren: () => import('./booking/booking.module').then( m => m.BookingPageModule)
+      },
+      {
+        path: 'notif',
+        loadChildren: () => import('./notif/notif.module').then( m => m.NotifPageModule)
       },
     ],
   },

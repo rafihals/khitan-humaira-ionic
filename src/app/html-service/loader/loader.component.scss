@@ -19,16 +19,10 @@
   height: 100%;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(5px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 1000;
 }
 
 body {
-  background: var(--bg);
-  color: var(--fg);
-  font: 1em/1.5 sans-serif;
   height: 80vh;
   display: grid;
   place-items: center;
@@ -41,7 +35,7 @@ body {
 }
 .pl__ring,
 .pl__ball {
-  animation: ring 1.2s ease-out infinite;
+  animation: ring 2s ease-out infinite;
 }
 .pl__ball {
   animation-name: ball;
