@@ -28,17 +28,14 @@ export class HeaderComponent implements OnInit {
       case 'home':
         this.pageTitle = 'Home';
         break;
-      case 'booking':
-        this.pageTitle = 'Booking';
+      case 'subscribe':
+        this.pageTitle = 'Subscribe';
+        break;
+      case 'share':
+        this.pageTitle = 'Share';
         break;
       case 'testimonial':
         this.pageTitle = 'Testimonial';
-        break;
-      case 'form':
-        this.pageTitle = 'Form';
-        break;
-      case 'notif':
-        this.pageTitle = 'Notif';
         break;
       default:
         this.pageTitle = 'Default Title';

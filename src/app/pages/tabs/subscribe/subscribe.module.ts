@@ -1,21 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
-import { FormPageRoutingModule } from './form-routing.module';
-import { FormPage } from './form.page';
+
+import { SubscribePageRoutingModule } from './subscribe-routing.module';
+
+import { SubscribePage } from './subscribe.page';
 import { HtmlModule } from '../../../modules/html/html.module';
 
+
 @NgModule({
-  
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FormPageRoutingModule,
-    ReactiveFormsModule,
+    SubscribePageRoutingModule,
     HtmlModule,
   ],
-  declarations: [FormPage,],
+  declarations: [SubscribePage]
 })
-export class FormPageModule {}
+export class SubscribePageModule {}

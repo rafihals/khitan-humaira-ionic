@@ -1,19 +1,16 @@
 <ion-tabs>
-  <div class="sc-bottom-bar" *ngIf="!isLandingPage" #menuBar>
-    <a class="sc-menu-item" (click)="selectMenu($event, 0)">
-      <i class="fas fa-cart-shopping" style="margin-left: -4px;"></i>
+  <div class="sc-bottom-bar" #menuBar>
+    <a class="sc-menu-item" href="/page/home" (click)="selectMenu($event, 0)">
+      <ion-icon name="home-outline"></ion-icon>
     </a>
-    <a class="sc-menu-item" (click)="selectMenu($event, 1)">
-      <i class="fas fa-plus" style="margin-left: 1px;"></i>
+    <a class="sc-menu-item" href="/page/subscribe" (click)="selectMenu($event, 1)">
+      <i class="fa-regular fa-bell" style="margin-left: 1px;"></i>
     </a>
-    <a class="sc-menu-item sc-current" (click)="selectMenu($event, 2)">
-      <i class="fas fa-home" style="margin-left: -2px;"></i>
+    <a class="sc-menu-item" href="/page/share" (click)="selectMenu($event, 2)">
+      <ion-icon name="share-social-outline" style="margin-left: -3px;"></ion-icon>
     </a>
-    <a class="sc-menu-item" (click)="selectMenu($event, 3)">
-      <i class="fas fa-smile" style="margin-left: -1px;"></i>
-    </a>
-    <a class="sc-menu-item" (click)="selectMenu($event, 4)">
-      <i class="fas fa-bell"></i>
+    <a class="sc-menu-item" href="/page/testimonial" (click)="selectMenu($event, 3)">
+      <ion-icon name="happy-outline" style="margin-left: -1px;"></ion-icon>
     </a>
     <a class="sc-nav-indicator" #menuIndicator></a>
   </div>

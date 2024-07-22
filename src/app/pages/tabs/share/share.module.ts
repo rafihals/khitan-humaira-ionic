@@ -4,19 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { BookingPageRoutingModule } from './booking-routing.module';
-import { BookingPage } from './booking.page';
+import { SharePageRoutingModule } from './share-routing.module';
 
+import { SharePage } from './share.page';
 import { HtmlModule } from '../../../modules/html/html.module';
 
 @NgModule({
   imports: [
-    HtmlModule,
     CommonModule,
     FormsModule,
     IonicModule,
-    BookingPageRoutingModule
+    SharePageRoutingModule,
+    HtmlModule,
   ],
-  declarations: [BookingPage,]
+  declarations: [SharePage]
 })
-export class BookingPageModule {}
+export class SharePageModule {}

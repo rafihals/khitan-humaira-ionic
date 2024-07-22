@@ -3,8 +3,8 @@ ion-title {
 }
 
 .rounded-img {
-  width: 60px; 
-  height: 60px;
+  width: 50px; 
+  height: 50px;
   border-radius: 50%;
   overflow: hidden; 
 }
@@ -16,3 +16,12 @@ ion-title {
   padding: 3px;
 }
 
+ion-toolbar {
+  --background: hsla(0,0%,100%,.8) !important;
+  backdrop-filter: saturate(180%) blur(8px) !important;
+  border-bottom: none !important;
+}
+
+.line {
+  color: green;
+}

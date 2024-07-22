@@ -11,6 +11,8 @@ import { filter } from 'rxjs';
 export class TabsPage implements OnInit, AfterViewInit {
 
   @ViewChild('tabs', { static: false }) tabs: IonTabs;
+  @ViewChild('menuBar') menuBar!: ElementRef;
+  @ViewChild('menuIndicator') menuIndicator!: ElementRef;
   isLandingPage: boolean = false;
 
   constructor(private router: Router) {
@@ -23,40 +25,40 @@ export class TabsPage implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    // No need to initialize here since it's handled in ngAfterViewInit
     this.isLandingPage = false;
   }
-
-  @ViewChild('menuBar') menuBar!: ElementRef;
-  @ViewChild('menuIndicator') menuIndicator!: ElementRef;
 
   ngAfterViewInit() {
     this.setInitialMenuIndicatorPosition();
   }
 
   setInitialMenuIndicatorPosition() {
-    const menuItems = this.menuBar.nativeElement.querySelectorAll('.sc-menu-item');
     const currentUrl = this.router.url;
+    const menuItems = this.menuBar.nativeElement.querySelectorAll('.sc-menu-item');
     const menuItemsArray = Array.from(menuItems) as HTMLElement[];
-    const initialMenuItem = menuItemsArray.find((item: HTMLElement) => item.getAttribute('href') === currentUrl);
+    const targetItem = menuItemsArray.find((item: HTMLElement) => {
+      return item.getAttribute('href') === currentUrl;
+    });
 
-    if (initialMenuItem) {
-      initialMenuItem.classList.add('sc-current');
-      this.updateIndicatorPosition(initialMenuItem);
+    if (targetItem) {
+      targetItem.classList.add('sc-current');
+      this.updateIndicatorPosition(targetItem);
     }
   }
 
   selectMenu(event: Event, index: number) {
-    if (index === 0){
-      this.router.navigate(['/tabs/booking']);
-    } else if (index === 1){
-      this.router.navigate(['/tabs/form']);
-    }else if (index === 2){
-      this.router.navigate(['/tabs/home']);
-    }else if (index === 3){
-      this.router.navigate(['/tabs/testimonial']);
-    }else if (index === 4){
-      this.router.navigate(['/tabs/notif']);
+    let targetUrl: string;
+
+    switch(index) {
+      case 0: targetUrl = '/page/home'; break;
+      case 1: targetUrl = '/page/subscribe'; break;
+      case 2: targetUrl = '/page/share'; break;
+      case 3: targetUrl = '/page/testimonial'; break;
+      default: return;
     }
+
+    this.router.navigate([targetUrl]);
     event.preventDefault();
     const target = event.currentTarget as HTMLElement;
     this.updateIndicatorPosition(target);
@@ -83,11 +85,10 @@ export class TabsPage implements OnInit, AfterViewInit {
   }
 
   getMenuIndexFromUrl(url: string): number {
-    if (url.includes('/booking')) return 0;
-    if (url.includes('/form')) return 1;
-    if (url.includes('/home')) return 2;
+    if (url.includes('/home')) return 0;
+    if (url.includes('/subscribe')) return 1;
+    if (url.includes('/share')) return 2;
     if (url.includes('/testimonial')) return 3;
-    if (url.includes('/notif')) return 4;
     return -1;
   }
 
@@ -101,4 +102,5 @@ export class TabsPage implements OnInit, AfterViewInit {
       });
       target.classList.add('sc-current');
     }
-  }}
+  }
+}
