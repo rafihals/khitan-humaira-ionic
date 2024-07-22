@@ -1,10 +1,24 @@
-<ion-header [translucent]="true" class="ion-no-border">
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>{{ pageTitle }} <strong class="line">| </strong> Griya Khitan Humaira</ion-title>
+    <ion-title> <strong class="title"> {{ pageTitle }}</strong> <strong class="line"> | </strong> Griya Khitan
+      Humaira</ion-title>
     <ion-buttons slot="start">
       <div class="rounded-img">
         <img src="../../assets/img/3.png" alt="Logo" class="header-logo" />
       </div>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="onPresentPopover($event)">
+        <ion-icon class="green" name="menu"></ion-icon>
+      </ion-button>
+      <ion-popover #popover [animated]="true" [isOpen]="isOpen" (didDismiss)="isOpen = false">
+        <ng-template>
+          <ion-content class="ion-padding">
+            Hello World!
+            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium laboriosam architecto dicta dolor placeat aliquam, sapiente enim nemo natus labore minus expedita dignissimos, quae vel cumque, sed laudantium officiis vitae.</h1>
+          </ion-content>
+        </ng-template>
+      </ion-popover>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>

@@ -38,6 +38,6 @@ export class LandingPage implements OnInit {
   }
 
   onNavigateHome(): void {
-    this.router.navigate(['tabs/home']);
+    this.router.navigate(['page/home']);
   }
 }

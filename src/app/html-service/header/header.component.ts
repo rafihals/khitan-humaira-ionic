@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
@@ -8,6 +8,9 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  @ViewChild('popover') popover;
+
+  isOpen = false;
   pageTitle: string = '';
 
   constructor(
@@ -40,5 +43,10 @@ export class HeaderComponent implements OnInit {
       default:
         this.pageTitle = 'Default Title';
     }
+  }
+
+  onPresentPopover(e: Event) {
+    this.popover.event = e;
+    this.isOpen = true;
   }
 }
