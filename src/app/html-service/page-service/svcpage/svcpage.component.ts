@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { onFadeInBottom, onSlideInFromTop } from '../../../modules/animation/animation';
+import { onFadeInBottom, onSlideInFromLeft, onSlideInFromRight, onSlideInFromTop } from '../../../modules/animation/animation';
 import { ModalController } from '@ionic/angular';
 import { Modal1Component } from '../../modal/modal-service-page/modal1/modal1.component';
 import { Modal2Component } from '../../modal/modal-service-page/modal2/modal2.component';
@@ -11,21 +11,23 @@ import { Modal5Component } from '../../modal/modal-service-page/modal5/modal5.co
   selector: 'app-svcpage',
   templateUrl: './svcpage.component.html',
   styleUrls: ['./svcpage.component.scss'],
-  animations: [onFadeInBottom(), onSlideInFromTop()],
+  animations: [onFadeInBottom(), onSlideInFromTop(), onSlideInFromLeft()],
 
 })
 export class SvcpageComponent implements OnInit {
-  
-  onShow: boolean = false;
 
-  constructor(private modalController: ModalController) {}
-  
+  onShow: boolean = false;
+  onShowSub: boolean = false;
+
+  constructor(private modalController: ModalController) { }
+
   ngOnInit() {
     setTimeout(() => {
       this.onShow = true;
-    }, 1000);
+      this.onShowSub = true;
+    }, 1002);
   }
-  
+
   async onOpenModal1() {
     const modal = await this.modalController.create({
       component: Modal1Component,
