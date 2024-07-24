@@ -24,6 +24,10 @@ const routes: Routes = [
         path: 'share',
         loadChildren: () => import('./share/share.module').then( m => m.SharePageModule)
       },
+      {
+        path: 'service',
+        loadChildren: () => import('./service/service.module').then( m => m.ServicePageModule)
+      },
     ],
   },
 

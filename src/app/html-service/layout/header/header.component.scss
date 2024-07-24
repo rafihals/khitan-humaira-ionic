@@ -21,9 +21,9 @@ ion-title {
 }
 
 // ion-toolbar {
-  // --background: hsla(0, 0%, 100%, 0.8) !important;
-  // backdrop-filter: saturate(180%) blur(8px) !important;
-  // border-bottom: none !important;
+// --background: hsla(0, 0%, 100%, 0.8) !important;
+// backdrop-filter: saturate(180%) blur(8px) !important;
+// border-bottom: none !important;
 // }
 
 .line {
@@ -31,6 +31,12 @@ ion-title {
 }
 
 ion-icon.green {
-  color: black;
+  color: white;
   font-size: 25px;
+}
+
+.border-btn {
+  border: solid 1px green;
+  border-radius: 50px;
+  background-color: green;
 }

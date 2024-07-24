@@ -52,7 +52,7 @@ export class TabsPage implements OnInit, AfterViewInit {
 
     switch(index) {
       case 0: targetUrl = '/page/home'; break;
-      case 1: targetUrl = '/page/subscribe'; break;
+      case 1: targetUrl = '/page/service'; break;
       case 2: targetUrl = '/page/share'; break;
       case 3: targetUrl = '/page/testimonial'; break;
       default: return;
@@ -86,7 +86,7 @@ export class TabsPage implements OnInit, AfterViewInit {
 
   getMenuIndexFromUrl(url: string): number {
     if (url.includes('/home')) return 0;
-    if (url.includes('/subscribe')) return 1;
+    if (url.includes('/service')) return 1;
     if (url.includes('/share')) return 2;
     if (url.includes('/testimonial')) return 3;
     return -1;

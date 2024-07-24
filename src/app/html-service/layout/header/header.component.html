@@ -7,16 +7,13 @@
         <img src="../../assets/img/3.png" alt="Logo" class="header-logo" />
       </div>
     </ion-buttons>
-    <ion-buttons slot="end">
+    <ion-buttons class="border-btn" slot="end">
       <ion-button (click)="onPresentPopover($event)">
-        <ion-icon class="green" name="menu"></ion-icon>
+        <ion-icon class="green" name="notifications-outline"></ion-icon>
       </ion-button>
       <ion-popover #popover [animated]="true" [isOpen]="isOpen" (didDismiss)="isOpen = false">
         <ng-template>
-          <ion-content class="ion-padding">
-            Hello World!
-            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium laboriosam architecto dicta dolor placeat aliquam, sapiente enim nemo natus labore minus expedita dignissimos, quae vel cumque, sed laudantium officiis vitae.</h1>
-          </ion-content>
+            <app-notif></app-notif>
         </ng-template>
       </ion-popover>
     </ion-buttons>
