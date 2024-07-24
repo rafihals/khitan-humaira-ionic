@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SvctestimonialComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {}
 

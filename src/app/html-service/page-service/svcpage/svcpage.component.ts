@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { onFadeInBottom, onSlideInFromTop } from '../../../modules/animation/animation';
+import { ModalController } from '@ionic/angular';
+import { Modal1Component } from '../../modal/modal-service-page/modal1/modal1.component';
+import { Modal2Component } from '../../modal/modal-service-page/modal2/modal2.component';
+import { Modal3Component } from '../../modal/modal-service-page/modal3/modal3.component';
+import { Modal4Component } from '../../modal/modal-service-page/modal4/modal4.component';
+import { Modal5Component } from '../../modal/modal-service-page/modal5/modal5.component';
 
 @Component({
   selector: 'app-svcpage',
@@ -11,45 +17,44 @@ import { onFadeInBottom, onSlideInFromTop } from '../../../modules/animation/ani
 export class SvcpageComponent implements OnInit {
   
   onShow: boolean = false;
-  isModalOpen1 = false;
-  isModalOpen2 = false;
-  isModalOpen3 = false;
-  isModalOpen4 = false;
-  isModalOpen5 = false;
-  
-  setOpen(modalNumber: number, isOpen: boolean) {
-    this.isModalOpen1 = false;
-    this.isModalOpen2 = false;
-    this.isModalOpen3 = false;
-    this.isModalOpen4 = false;
-    this.isModalOpen5 = false;
-  
-    switch (modalNumber) {
-      case 1:
-        this.isModalOpen1 = isOpen;
-        break;
-      case 2:
-        this.isModalOpen2 = isOpen;
-        break;
-      case 3:
-        this.isModalOpen3 = isOpen;
-        break;
-      case 4:
-        this.isModalOpen4 = isOpen;
-        break;
-      case 5:
-        this.isModalOpen5 = isOpen;
-        break;
-    }
-  }
-  
 
-  constructor() { }
-
+  constructor(private modalController: ModalController) {}
+  
   ngOnInit() {
     setTimeout(() => {
       this.onShow = true;
     }, 1000);
   }
+  
+  async onOpenModal1() {
+    const modal = await this.modalController.create({
+      component: Modal1Component,
+    });
+    await modal.present();
+  }
 
+  async onOpenModal2() {
+    const modal = await this.modalController.create({
+      component: Modal2Component,
+    });
+    await modal.present();
+  }
+  async onOpenModal3() {
+    const modal = await this.modalController.create({
+      component: Modal3Component,
+    });
+    await modal.present();
+  }
+  async onOpenModal4() {
+    const modal = await this.modalController.create({
+      component: Modal4Component,
+    });
+    await modal.present();
+  }
+  async onOpenModal5() {
+    const modal = await this.modalController.create({
+      component: Modal5Component,
+    });
+    await modal.present();
+  }
 }

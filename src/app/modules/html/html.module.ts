@@ -8,14 +8,16 @@ import { RefreshComponent } from './../../html-service/layout/refresh/refresh.co
 import { NotifComponent } from './../../html-service/layout/notif/notif.component';
 import { SvcpageComponent } from './../../html-service/page-service/svcpage/svcpage.component';
 import { SvchomeComponent } from './../../html-service/page-service/svchome/svchome.component';
-import { Modal1Component } from './../../html-service/modal/modal1/modal1.component';
-import { Modal2Component } from './../../html-service/modal/modal2/modal2.component';
-import { Modal3Component } from './../../html-service/modal/modal3/modal3.component';
-import { Modal4Component } from './../../html-service/modal/modal4/modal4.component';
-import { Modal5Component } from './../../html-service/modal/modal5/modal5.component';
-import { SvcmodalComponent } from './../../html-service/modal/svcmodal/svcmodal.component';
+import { Modal1Component } from '../../html-service/modal/modal-service-page/modal1/modal1.component';
+import { Modal2Component } from '../../html-service/modal/modal-service-page/modal2/modal2.component';
+import { Modal3Component } from '../../html-service/modal/modal-service-page/modal3/modal3.component';
+import { Modal4Component } from '../../html-service/modal/modal-service-page/modal4/modal4.component';
+import { Modal5Component } from '../../html-service/modal/modal-service-page/modal5/modal5.component';
 import { SvcshareComponent } from '../../html-service/page-service/svcshare/svcshare.component';
 import { SvctestimonialComponent } from '../../html-service/page-service/svctestimonial/svctestimonial.component';
+import { ModalbottomsheetComponent } from '../../html-service/modal/modal-template/modalbottomsheet/modalbottomsheet.component';
+import { ModalfullsheetComponent } from '../../html-service/modal/modal-template/modalfullsheet/modalfullsheet.component';
+import { ModalShareOneComponent } from '../../html-service/modal/modal-share-page/modal-share-one/modal-share-one.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +33,11 @@ import { SvctestimonialComponent } from '../../html-service/page-service/svctest
     Modal3Component,
     Modal4Component,
     Modal5Component,
-    SvcmodalComponent,
     SvcshareComponent,
-    SvctestimonialComponent
+    SvctestimonialComponent,
+    ModalbottomsheetComponent,
+    ModalfullsheetComponent,
+    ModalShareOneComponent
   ],
   imports: [
     CommonModule,
@@ -51,9 +55,11 @@ import { SvctestimonialComponent } from '../../html-service/page-service/svctest
     Modal3Component,
     Modal4Component,
     Modal5Component,
-    SvcmodalComponent,
     SvcshareComponent,
-    SvctestimonialComponent
+    SvctestimonialComponent,
+    ModalbottomsheetComponent,
+    ModalfullsheetComponent,
+    ModalShareOneComponent
   ],
 })
 export class HtmlModule { }

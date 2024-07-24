@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { ModalShareOneComponent } from '../../modal/modal-share-page/modal-share-one/modal-share-one.component';
 
 @Component({
   selector: 'app-svcshare',
@@ -7,8 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SvcshareComponent implements OnInit {
 
-  constructor() { }
+  isModalOpen = false;
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
+  constructor(private modalController: ModalController) {}
+
+  async onOpenModalOne() {
+    const modal = await this.modalController.create({
+      component: ModalShareOneComponent,
+      breakpoints: [0, 0.5, 1],
+      initialBreakpoint: 0.5,
+    });
+    await modal.present();
+  }
 }
