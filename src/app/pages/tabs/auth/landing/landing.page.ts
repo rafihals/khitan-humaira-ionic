@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { onFadeInAnimation, onFadeInBottom } from '../../../../modules/animation/animation';
+import { onFadeInAnimation, onFadeInBottom } from '../../../../modules/animation/animation.module';
 
 @Component({
   selector: 'app-landing',

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Swiper } from 'swiper';
+declare function tes(): any;
 
 @Component({
   selector: 'app-svctestimonial',
@@ -9,6 +11,14 @@ export class SvctestimonialComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    tes();
+  }
+
+
+
+  ngAfterViewInit() {
+    // tes();
+  }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { onFadeInBottom, onSlideInFromLeft, onSlideInFromRight, onSlideInFromTop } from '../../../modules/animation/animation';
+import { onFadeInBottom, onSlideInFromLeft, onSlideInFromRight, onSlideInFromTop } from '../../../modules/animation/animation.module';
 import { ModalController } from '@ionic/angular';
 import { Modal1Component } from '../../modal/modal-service-page/modal1/modal1.component';
 import { Modal2Component } from '../../modal/modal-service-page/modal2/modal2.component';
