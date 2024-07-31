@@ -1,0 +1,413 @@
+<!-- svc slider -->
+<body>
+    <div class="container">
+      <div id="slide">
+        <div class="item" style="background-image: url('/assets/img/x.jpg');">
+          <div class="content">
+            <div class="name">LUNDEV</div>
+            <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+            <button>See more</button>
+          </div>
+        </div>
+        <div class="item" style="background-image: url('/assets/img/l.jpg');">
+          <div class="content">
+            <div class="name">LUNDEV</div>
+            <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+            <button>See more</button>
+          </div>
+        </div>
+        <div class="item" style="background-image: url('/assets/img/y.jpg');">
+          <div class="content">
+            <div class="name">LUNDEV</div>
+            <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+            <button>See more</button>
+          </div>
+        </div>
+        <div class="item" style="background-image: url('/assets/img/x.jpg');">
+          <div class="content">
+            <div class="name">LUNDEV</div>
+            <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+            <button>See more</button>
+          </div>
+        </div>
+        <div class="item" style="background-image: url('/assets/img/l.jpg');">
+          <div class="content">
+            <div class="name">LUNDEV</div>
+            <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+            <button>See more</button>
+          </div>
+        </div>
+        <div class="item" style="background-image: url('/assets/img/y.jpg');">
+          <div class="content">
+            <div class="name">LUNDEV</div>
+            <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+            <button>See more</button>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+        <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+      </div>
+    </div>
+  </body>
+
+
+  <style>
+    body{
+  overflow: hidden;
+  padding: 20px;
+}
+.container{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  width:1000px;
+  height:600px;
+  padding:50px;
+  background-color: #f5f5f5;
+  box-shadow: 0 30px 50px #dbdbdb;
+}
+#slide{
+  width:max-content;
+  margin-top:50px;
+}
+.item{
+  width:200px;
+  height:300px;
+  background-position: 50% 50%;
+  display: inline-block;
+  transition: 0.5s;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  top:50%;
+  transform: translate(0,-50%);
+  border-radius: 20px;
+  box-shadow:  0 30px 50px #505050;
+}
+.item:nth-child(1),
+.item:nth-child(2){
+  left:0;
+  top:0;
+  transform: translate(0,0);
+  border-radius: 0;
+  width:100%;
+  height:100%;
+  box-shadow: none;
+}
+.item:nth-child(3){
+  left:50%;
+}
+.item:nth-child(4){
+  left:calc(50% + 220px);
+}
+.item:nth-child(5){
+  left:calc(50% + 440px);
+}
+.item:nth-child(n+6){
+  left:calc(50% + 660px);
+  opacity: 0;
+}
+.item .content{
+  position: absolute;
+  top:50%;
+  left:100px;
+  width:300px;
+  text-align: left;
+  padding:0;
+  color:#eee;
+  transform: translate(0,-50%);
+  display: none;
+  font-family: system-ui;
+}
+.item:nth-child(2) .content{
+  display: block;
+  z-index: 11111;
+}
+.item .name{
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 0;
+  animation:showcontent 1s ease-in-out 1 forwards
+}
+.item .des{
+  margin:20px 0;
+  opacity: 0;
+  animation:showcontent 1s ease-in-out 0.3s 1 forwards
+}
+.item button{
+  padding:10px 20px;
+  border:none;
+  opacity: 0;
+  animation:showcontent 1s ease-in-out 0.6s 1 forwards
+}
+@keyframes showcontent{
+  from{
+      opacity: 0;
+      transform: translate(0,100px);
+      filter:blur(33px);
+  }to{
+      opacity: 1;
+      transform: translate(0,0);
+      filter:blur(0);
+  }
+}
+.buttons{
+  position: absolute;
+  bottom:30px;
+  z-index: 222222;
+  text-align: center;
+  width:100%;
+}
+.buttons button{
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  border:1px solid #555;
+  transition: 0.5s;
+}.buttons button:hover{
+  background-color: #bac383;
+}
+
+  </style>
+
+
+
+<!-- svc page -->
+
+<ion-content>
+  <div class="wrapper">
+    <section>
+      <div class="judul" *ngIf="onShow" @slideInFromTop>
+        <h1>Pelayanan kami</h1>
+      </div>
+      <div class="judul" *ngIf="onShowSub" @slideInFromLeft>
+        <p><strong class="str"> | </strong>Lorem ipsum dolor sit amfpem ediod</p>
+      </div>
+      <div class="judul" >
+        <h1 class="lore">lorem</h1>
+      </div>
+      <div class="row" *ngIf="onShow" @fadeInBottom>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <ion-icon name="bed-outline"></ion-icon>
+            </div>
+            <h3>Service Heading</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+            <div class="cen">
+              <ion-button size="default" color="light" shape="round" (click)="onOpenModal1()">Detail</ion-button>
+            </div>
+          </div>
+  
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <ion-icon name="cash-outline"></ion-icon>
+            </div>
+            <h3>Service Heading</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+            <div class="cen">
+              <ion-button size="default" color="light" shape="round" (click)="onOpenModal2()">Detail</ion-button>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <ion-icon name="bandage-outline"></ion-icon>
+            </div>
+            <h3>Service Heading</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+            <div class="cen">
+              <ion-button size="default" color="light" shape="round" (click)="onOpenModal3()">Detail</ion-button>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <ion-icon name="cash-outline"></ion-icon>
+            </div>
+            <h3>Service Heading</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+            <div class="cen">
+              <ion-button size="default" color="light" shape="round" (click)="onOpenModal4()">Detail</ion-button>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <ion-icon name="checkbox-outline"></ion-icon>
+            </div>
+            <h3>Service Heading</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+            <div class="cen">
+              <ion-button size="default" color="light" shape="round" (click)="onOpenModal5()">Detail</ion-button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cen" style="visibility: hidden;">
+        <div class="me" style="height: 70px;">
+          <h1>ke</h1>
+          <h1>ke</h1>
+          <h1>ke</h1>
+        </div>
+      </div>
+    </section>
+  </div>
+</ion-content>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+.wrapper {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  padding-top: 20px;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding-bottom: 3rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  width: 100%;
+  padding: 0 1em 1em 1em;
+  text-align: center;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 2em 1.5em;
+  background: linear-gradient(#ffffff 50%, #45bc9a 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 1s;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f194c;
+  margin: 1em 0;
+}
+p {
+  color: #575a7b;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+.icon-wrapper {
+  background-color: #45bc9a;
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+}
+.card:hover {
+  background-position: 0 100%;
+}
+.card:hover .icon-wrapper {
+  background-color: #ffffff;
+  color: #45bc9a;
+}
+.card:hover h3 {
+  color: #ffffff;
+}
+.card:hover p {
+  color: #f0f0f0;
+}
+@media screen and (min-width: 768px) {
+  section {
+    padding: 0 2em;
+  }
+  .column {
+    flex: 0 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  section {
+    padding: 1em 3em;
+  }
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+.judul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Poppins", sans-serif, "Segoe UI", Tahoma, Geneva, Verdana;
+  font-weight: 500;
+  outline: none;
+}
+
+.cen {
+  display: flex;
+  padding-top: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif, "Segoe UI", Tahoma, Geneva, Verdana;
+  font-weight: 500;
+  outline: none;
+}
+
+.str {
+  color: green;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.lore::after {
+  content: "";
+  display: flex;
+  width: 17%;
+  height: 4px;
+  background-color: green;
+  position: absolute;
+}
+</style>

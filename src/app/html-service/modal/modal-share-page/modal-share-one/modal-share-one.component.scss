@@ -20,7 +20,7 @@
     color: #000;
 }
 
-.social-menu ul li .fab:hover{
+.social-menu ul li .fab{
     color: #fff;
 }
 
@@ -30,7 +30,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #fff;
+    // background-color: #fff;
     text-align: center;
     transition: .6s;
     box-shadow: 0 5px 4px rgba(0,0,0,.5);
@@ -40,15 +40,19 @@
     transform: translate(0, -10%);
 }
 
-.social-menu ul li:nth-child(1) a:hover{
-    background-color: rgba(0, 0, 0, 0.829);
+.social-menu ul li:nth-child(1){
+    background-color: #3ac371;
+    border-radius: 50px;
 }
-.social-menu ul li:nth-child(2) a:hover{
+.social-menu ul li:nth-child(2){
     background-color: #E4405F;
+    border-radius: 50px;
 }
-.social-menu ul li:nth-child(3) a:hover{
+.social-menu ul li:nth-child(3){
     background-color: #0077b5;
+    border-radius: 50px;
 }
-.social-menu ul li:nth-child(4) a:hover{
-    background-color: #000;
+.social-menu ul li:nth-child(4){
+    background-color: #135cb6;
+    border-radius: 50px;
 }

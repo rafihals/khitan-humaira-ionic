@@ -18,6 +18,7 @@ import { SvctestimonialComponent } from '../../html-service/page-service/svctest
 import { ModalbottomsheetComponent } from '../../html-service/modal/modal-template/modalbottomsheet/modalbottomsheet.component';
 import { ModalfullsheetComponent } from '../../html-service/modal/modal-template/modalfullsheet/modalfullsheet.component';
 import { ModalShareOneComponent } from '../../html-service/modal/modal-share-page/modal-share-one/modal-share-one.component';
+import { TitleComponent } from '../../html-service/layout/title/title.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ModalShareOneComponent } from '../../html-service/modal/modal-share-pag
     SvctestimonialComponent,
     ModalbottomsheetComponent,
     ModalfullsheetComponent,
-    ModalShareOneComponent
+    ModalShareOneComponent,
+    TitleComponent
   ],
   imports: [
     CommonModule,
@@ -59,7 +61,8 @@ import { ModalShareOneComponent } from '../../html-service/modal/modal-share-pag
     SvctestimonialComponent,
     ModalbottomsheetComponent,
     ModalfullsheetComponent,
-    ModalShareOneComponent
+    ModalShareOneComponent,
+    TitleComponent
   ],
 })
 export class HtmlModule { }

@@ -1,100 +1,56 @@
-<ion-content>
-  <div class="wrapper">
-    <section>
-      <div class="judul" *ngIf="onShow" @slideInFromTop>
-        <h1>Pelayanan kami</h1>
-      </div>
-      <div class="judul" *ngIf="onShowSub" @slideInFromLeft>
-        <p><strong class="str"> | </strong>Lorem ipsum dolor sit amfpem ediod</p>
-      </div>
-      <div class="judul" >
-        <h1 class="lore">lorem</h1>
-      </div>
-      <div class="row" *ngIf="onShow" @fadeInBottom>
-        <div class="column">
-          <div class="card">
-            <div class="icon-wrapper">
-              <ion-icon name="bed-outline"></ion-icon>
-            </div>
-            <h3>Service Heading</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-              consequatur necessitatibus eaque.
-            </p>
-            <div class="cen">
-              <ion-button size="default" color="light" shape="round" (click)="onOpenModal1()">Detail</ion-button>
-            </div>
-          </div>
-  
-        </div>
-        <div class="column">
-          <div class="card">
-            <div class="icon-wrapper">
-              <ion-icon name="cash-outline"></ion-icon>
-            </div>
-            <h3>Service Heading</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-              consequatur necessitatibus eaque.
-            </p>
-            <div class="cen">
-              <ion-button size="default" color="light" shape="round" (click)="onOpenModal2()">Detail</ion-button>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <div class="icon-wrapper">
-              <ion-icon name="bandage-outline"></ion-icon>
-            </div>
-            <h3>Service Heading</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-              consequatur necessitatibus eaque.
-            </p>
-            <div class="cen">
-              <ion-button size="default" color="light" shape="round" (click)="onOpenModal3()">Detail</ion-button>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <div class="icon-wrapper">
-              <ion-icon name="cash-outline"></ion-icon>
-            </div>
-            <h3>Service Heading</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-              consequatur necessitatibus eaque.
-            </p>
-            <div class="cen">
-              <ion-button size="default" color="light" shape="round" (click)="onOpenModal4()">Detail</ion-button>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <div class="icon-wrapper">
-              <ion-icon name="checkbox-outline"></ion-icon>
-            </div>
-            <h3>Service Heading</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-              consequatur necessitatibus eaque.
-            </p>
-            <div class="cen">
-              <ion-button size="default" color="light" shape="round" (click)="onOpenModal5()">Detail</ion-button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cen" style="visibility: hidden;">
-        <div class="me" style="height: 70px;">
-          <h1>ke</h1>
-          <h1>ke</h1>
-          <h1>ke</h1>
-        </div>
-      </div>
-    </section>
+<app-title></app-title>
+<div class="image-card-component" style="margin-top: 2rem;">
+  <div class="image" style="background-image: url(/assets/img/k.jpg);"></div>
+  <div class="content">
+    <div class="content-text">
+      <h4>Khitan Tanpa Suntik</h4>
+      <p>
+        Metode khitan modern yang menggunakan teknologi laser atau metode lain yang tidak memerlukan suntikan. Proses ini lebih nyaman dan minim rasa sakit bagi pasien.      </p>
+    </div>
+    <a (click)="onOpenModal1()" class="cta">Read more</a>
   </div>
-</ion-content>
+</div>
+<div class="image-card-component" style="margin-top: 2rem;">
+  <div class="image" style="background-image: url(/assets/img/asked.jpg);"></div>
+  <div class="content">
+    <div class="content-text">
+      <h4>Khitan Tanpa Suntik</h4>
+      <p>
+        Metode khitan modern yang menggunakan teknologi laser atau metode lain yang tidak memerlukan suntikan. Proses ini lebih nyaman dan minim rasa sakit bagi pasien.      </p>
+    </div>
+    <a (click)="onOpenModal2()" class="cta">Read more</a>
+  </div>
+</div>
+<div class="image-card-component" style="margin-top: 2rem;">
+  <div class="image" style="background-image: url(/assets/img/asked.jpg);"></div>
+  <div class="content">
+    <div class="content-text">
+      <h4>Khitan Tanpa Suntik</h4>
+      <p>
+        Metode khitan modern yang menggunakan teknologi laser atau metode lain yang tidak memerlukan suntikan. Proses ini lebih nyaman dan minim rasa sakit bagi pasien.      </p>
+    </div>
+    <a (click)="onOpenModal3()" class="cta">Read more</a>
+  </div>
+</div>
+<div class="image-card-component" style="margin-top: 2rem;">
+  <div class="image" style="background-image: url(/assets/img/asked.jpg);"></div>
+  <div class="content">
+    <div class="content-text">
+      <h4>Khitan Tanpa Suntik</h4>
+      <p>
+        Metode khitan modern yang menggunakan teknologi laser atau metode lain yang tidak memerlukan suntikan. Proses ini lebih nyaman dan minim rasa sakit bagi pasien.      </p>
+    </div>
+    <a (click)="onOpenModal4()" class="cta">Read more</a>
+  </div>
+</div>
+<div class="image-card-component" style="margin-top: 2rem;">
+  <div class="image" style="background-image: url(/assets/img/asked.jpg);"></div>
+  <div class="content">
+    <div class="content-text">
+      <h4>Khitan Tanpa Suntik</h4>
+      <p>
+        Metode khitan modern yang menggunakan teknologi laser atau metode lain yang tidak memerlukan suntikan. Proses ini lebih nyaman dan minim rasa sakit bagi pasien.      </p>
+    </div>
+    <a (click)="onOpenModal5()" class="cta">Read more</a>
+  </div>
+</div>

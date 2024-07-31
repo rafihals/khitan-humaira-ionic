@@ -13,8 +13,10 @@
 html {
   scroll-behavior: smooth;
 }
+
 * {
   scroll-behavior: smooth;
+  transition: all 0.7s ease-in-out;
 }
 
 body {

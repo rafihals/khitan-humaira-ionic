@@ -1,131 +1,100 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;600&display=swap');
 
-.wrapper {
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-section {
-  padding-top: 20px;
-  height: 100vh;
-  width: 100%;
-  display: grid;
-  place-items: center;
-  padding-bottom: 3rem;
-}
-.row {
+.image-card-component {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-}
-.column {
-  width: 100%;
-  padding: 0 1em 1em 1em;
-  text-align: center;
-}
-.card {
-  width: 100%;
-  height: 100%;
-  padding: 2em 1.5em;
-  background: linear-gradient(#ffffff 50%, #45bc9a 50%);
-  background-size: 100% 200%;
-  background-position: 0 2.5%;
-  border-radius: 5px;
-  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-  transition: 1s;
-}
-h3 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #1f194c;
-  margin: 1em 0;
-}
-p {
-  color: #575a7b;
-  font-size: 15px;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
-}
-.icon-wrapper {
-  background-color: #45bc9a;
-  position: relative;
-  margin: auto;
-  font-size: 30px;
-  height: 2.5em;
-  width: 2.5em;
-  color: #ffffff;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  transition: 0.5s;
-}
-.card:hover {
-  background-position: 0 100%;
-}
-.card:hover .icon-wrapper {
-  background-color: #ffffff;
-  color: #45bc9a;
-}
-.card:hover h3 {
-  color: #ffffff;
-}
-.card:hover p {
-  color: #f0f0f0;
-}
-@media screen and (min-width: 768px) {
-  section {
-    padding: 0 2em;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 2px rgb(0 0 0 / 10%);
+  transition: all 0.5s ease;
+
+  .image {
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px 0 0 8px;
   }
-  .column {
-    flex: 0 50%;
-    max-width: 50%;
-  }
-}
-@media screen and (min-width: 992px) {
-  section {
-    padding: 1em 3em;
-  }
-  .column {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
+
+  .content {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    flex: 1;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+
+    .cta {
+      margin-left: auto;
+      margin-right: 20px;
+      min-width: 120px;
+      background: #00897b;
+      padding: 10px;
+      text-align: center;
+      border-radius: 3px;
+      color: #FFF;
+      text-decoration: none;
+      font-weight: 700;
+      transition: all 0.5s ease;
+
+      &:hover {
+        background: #00695c;
+        box-shadow: 0px 0px 6px 0px #4db6ac;
+      }
+    }
+
+    .content-text {
+      margin-right: 60px;
+    }
+
+    h4 {
+      margin: 0 0 15px;
+      font-size: 30px;
+      line-height: 34px;
+      font-weight: 700;
+      color: #111;
+      transition: all 0.5s ease;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+      color: rgb(17 17 17 / 84%);
+      transition: all 0.5s ease;
+    }
   }
 }
 
-.judul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-family: "Poppins", sans-serif, "Segoe UI", Tahoma, Geneva, Verdana;
-  font-weight: 500;
-  outline: none;
+@media screen and (max-width: 991px) {
+  .image-card-component {
+    flex-direction: column;
+    margin: 0 16px;
+
+    .image {
+      height: 240px;
+      width: 100%;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .content {
+      flex-direction: column;
+
+      .content-text {
+        margin: auto;
+        text-align: center;
+      }
+
+      .cta {
+        margin: 25px auto 0;
+        width: 60%;
+      }
+
+      h4 {
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+    }
+  }
 }
 
-.cen {
-  display: flex;
-  padding-top: 5px;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 {
-  font-family: "Poppins", sans-serif, "Segoe UI", Tahoma, Geneva, Verdana;
-  font-weight: 500;
-  outline: none;
-}
-
-.str {
-  color: green;
-  padding-left: 10px;
-  font-size: 20px;
-}
-
-.lore::after {
-  content: "";
-  display: flex;
-  width: 17%;
-  height: 4px;
-  background-color: green;
-  position: absolute;
-}

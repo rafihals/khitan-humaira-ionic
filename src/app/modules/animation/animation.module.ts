@@ -13,7 +13,7 @@ export function onFadeInBottom() {
     return trigger('fadeInBottom', [
         state('void', style({ opacity: 0, transform: 'translateY(50px)' })),
         transition(':enter', [
-            animate('1000ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+            animate('600ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
         ])
     ])
 }
