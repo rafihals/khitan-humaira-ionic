@@ -1,0 +1,74 @@
+/* Primary Green */
+.header, .footer, .btn-primary {
+  background-color: #4CAF50;
+  color: #FFFFFF;
+}
+
+/* Secondary Green */
+.btn-secondary, a {
+  color: #8BC34A;
+}
+
+a:hover {
+  color: #4CAF50;
+}
+
+/* Light Green Background */
+.card, .panel {
+  background-color: #C8E6C9;
+  color: #388E3C;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+/* Dark Green Text */
+h1, h2, h3, h4, h5, h6, .text-primary {
+  color: #388E3C;
+}
+
+/* Neutral White Background */
+body {
+  background-color: #FFFFFF;
+  color: #388E3C;
+  font-family: Arial, sans-serif;
+}
+
+/* Light Gray Background */
+.secondary-background {
+  background-color: #F5F5F5;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Dark Gray Text */
+.text-secondary, .subheading {
+  color: #616161;
+}
+
+/* Accent Yellow */
+.accent {
+  background-color: #FFEB3B;
+  color: #388E3C;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  opacity: 0.9;
+}

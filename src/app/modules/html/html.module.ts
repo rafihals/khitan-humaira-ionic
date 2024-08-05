@@ -19,6 +19,9 @@ import { ModalbottomsheetComponent } from '../../html-service/modal/modal-templa
 import { ModalfullsheetComponent } from '../../html-service/modal/modal-template/modalfullsheet/modalfullsheet.component';
 import { ModalShareOneComponent } from '../../html-service/modal/modal-share-page/modal-share-one/modal-share-one.component';
 import { TitleComponent } from '../../html-service/layout/title/title.component';
+import { OurteamComponent } from '../../html-service/section/ourteam/ourteam.component';
+import { ArticlehomeComponent } from '../../html-service/section/articlehome/articlehome.component';
+import { OurserviceComponent } from '../../html-service/section/ourservice/ourservice.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { TitleComponent } from '../../html-service/layout/title/title.component'
     ModalbottomsheetComponent,
     ModalfullsheetComponent,
     ModalShareOneComponent,
-    TitleComponent
+    TitleComponent,
+    OurteamComponent,
+    ArticlehomeComponent,
+    OurserviceComponent
   ],
   imports: [
     CommonModule,
@@ -62,7 +68,10 @@ import { TitleComponent } from '../../html-service/layout/title/title.component'
     ModalbottomsheetComponent,
     ModalfullsheetComponent,
     ModalShareOneComponent,
-    TitleComponent
+    TitleComponent,
+    OurteamComponent,
+    ArticlehomeComponent,
+    OurserviceComponent
   ],
 })
 export class HtmlModule { }
