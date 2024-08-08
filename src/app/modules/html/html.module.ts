@@ -22,7 +22,9 @@ import { TitleComponent } from '../../html-service/layout/title/title.component'
 import { OurteamComponent } from '../../html-service/section/ourteam/ourteam.component';
 import { ArticlehomeComponent } from '../../html-service/section/articlehome/articlehome.component';
 import { OurserviceComponent } from '../../html-service/section/ourservice/ourservice.component';
-
+import { PophoverComponent } from '../../html-service/modal/modal-home-page/pophover/pophover.component';
+import { ParallaxComponent } from '../../html-service/section/parallax/parallax.component';
+import { ParallaxsecondComponent } from '../../html-service/section/parallaxsecond/parallaxsecond.component';
 @NgModule({
   declarations: [
     FooterComponent,
@@ -45,7 +47,10 @@ import { OurserviceComponent } from '../../html-service/section/ourservice/ourse
     TitleComponent,
     OurteamComponent,
     ArticlehomeComponent,
-    OurserviceComponent
+    OurserviceComponent,
+    PophoverComponent,
+    ParallaxComponent,
+    ParallaxsecondComponent
   ],
   imports: [
     CommonModule,
@@ -71,7 +76,10 @@ import { OurserviceComponent } from '../../html-service/section/ourservice/ourse
     TitleComponent,
     OurteamComponent,
     ArticlehomeComponent,
-    OurserviceComponent
+    OurserviceComponent,
+    PophoverComponent,
+    ParallaxComponent,
+    ParallaxsecondComponent
   ],
 })
 export class HtmlModule { }

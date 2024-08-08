@@ -164,31 +164,6 @@ h1 {
   }
 }
 
-.pricing {
-  margin-bottom: 4rem;
-  padding: 50px 0;
-  background-image: url("/assets/img/o.jpg");
-  background-size: cover;
-}
-
-@media (max-width: 500px) {
-  .pricing {
-    padding: 90px 0;
-  }
-}
-
-.pricing .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.pricing h2 {
-  color: black;
-  margin-bottom: 20px;
-}
 
 .btn {
   display: inline-block;

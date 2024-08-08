@@ -260,7 +260,7 @@ img {
 }
 
 .features {
-  margin-top: 100px;
+  // margin-top: 100px;
   background-color: #eff0f5;
 }
 
@@ -269,14 +269,22 @@ img {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  background: #3b3054;
+  background: white;
   background-size: cover;
   padding: 45px;
-  border-radius: 6px;
+  border-radius: 50px;
   margin-bottom: 20px;
   transform: translateY(-50%);
-  transition: gap 0.3s;
+  transition: gap 0.3s, box-shadow 0.3s ease-in-out;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
 }
+
+.url-shorten-form:hover {
+  box-shadow: none;
+  cursor: pointer;
+}
+
 
 @media (max-width: 850px) {
   .url-shorten-form {
@@ -303,9 +311,9 @@ img {
   font-family: "Poppins", sans-serif, "Segoe UI", Tahoma, Geneva, Verdana;
   font-size: 18px;
   padding: 8px 20px;
-  background: white;
+  background: #f6f6f6;
   border: 2px solid transparent;
-  border-radius: 6px;
+  border-radius: 50px;
   outline: none;
   transition: 0.2s;
 }
@@ -393,6 +401,12 @@ img {
   position: relative;
   background: white;
   border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.more-features-content .feature:hover {
+  box-shadow: none;
+  cursor: pointer;
 }
 
 .more-features-content .feature:before,
@@ -450,8 +464,9 @@ img {
   place-items: center;
   width: 65px;
   height: 65px;
-  background: #3b3054;
+  background: #ffffff;
   border-radius: 50%;
+  box-shadow: rgb(0 255 186 / 19%) 0px 10px 20px, rgb(35 95 87 / 23%) 0px 6px 6px;
 }
 
 @media (max-width: 666px) {
