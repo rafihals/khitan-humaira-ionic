@@ -25,6 +25,10 @@ import { OurserviceComponent } from '../../html-service/section/ourservice/ourse
 import { PophoverComponent } from '../../html-service/modal/modal-home-page/pophover/pophover.component';
 import { ParallaxComponent } from '../../html-service/section/parallax/parallax.component';
 import { ParallaxsecondComponent } from '../../html-service/section/parallaxsecond/parallaxsecond.component';
+import { SosmedComponent } from '../../html-service/section/sosmed/sosmed.component';
+import { SosmedtwoComponent } from '../../html-service/section/sosmedtwo/sosmedtwo.component';
+import { SosmedthreeComponent } from '../../html-service/section/sosmedthree/sosmedthree.component';
+import { TitletwoComponent } from '../../html-service/layout/titletwo/titletwo.component';
 @NgModule({
   declarations: [
     FooterComponent,
@@ -50,7 +54,11 @@ import { ParallaxsecondComponent } from '../../html-service/section/parallaxseco
     OurserviceComponent,
     PophoverComponent,
     ParallaxComponent,
-    ParallaxsecondComponent
+    ParallaxsecondComponent,
+    SosmedComponent,
+    SosmedtwoComponent,
+    SosmedthreeComponent,
+    TitletwoComponent
   ],
   imports: [
     CommonModule,
@@ -79,7 +87,11 @@ import { ParallaxsecondComponent } from '../../html-service/section/parallaxseco
     OurserviceComponent,
     PophoverComponent,
     ParallaxComponent,
-    ParallaxsecondComponent
+    ParallaxsecondComponent,
+    SosmedComponent,
+    SosmedtwoComponent,
+    SosmedthreeComponent,
+    TitletwoComponent
   ],
 })
 export class HtmlModule { }

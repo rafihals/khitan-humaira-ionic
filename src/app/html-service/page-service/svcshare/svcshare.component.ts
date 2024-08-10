@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { ModalShareOneComponent } from '../../modal/modal-share-page/modal-share-one/modal-share-one.component';
-declare function tes(): any;
 
 @Component({
   selector: 'app-svcshare',

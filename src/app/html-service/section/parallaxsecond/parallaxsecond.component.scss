@@ -1,93 +1,49 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
-* {
-  font-family: "Roboto Condensed", sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500&display=swap');
+
+// * {
+//   margin: 0;
+//   box-sizing: border-box;
+//   font-family: 'Saira Condensed', sans-serif;
+//   color: #ea8787;
+// }
+
+$view-height: 70vh;
+$view-width: 100vw;
+
 body {
-  margin: 0;
-}
-.parallax-wrapper {
-  perspective: 1px;
-  transform-style: preserve-3d;
-  height: 70vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-.background {
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex: 1 0 auto;
-  position: relative;
-  z-index: -1;
-  height: 70vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  transform: translateZ(-1px) scale(2);
-}
-.background--fall {
-  background-image: url("https://images.pexels.com/photos/33060/road-forest-season-autumn.jpg?cs=srgb&dl=autumn-fall-forest-33060.jpg&fm=jpg");
-}
-.background--winter {
-  background-image: url("https://images.pexels.com/photos/235595/pexels-photo-235595.jpeg?cs=srgb&dl=branches-cold-season-235595.jpg&fm=jpg");
-}
-.title {
-  position: absolute;
-  margin: 0;
-  top: calc(50% - 50px);
-  width: 100%;
-  left: 0;
-  right: 0;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  height: 100px;
-  color: white;
-  font-size: 5rem;
-  background: rgba(0, 0, 0, 0.4);
+  overflow-y: hidden;
+  height: $view-height;
 }
 
-.season-desc {
-  z-index: 1;
-  position: relative;
-  background: #282e34;
-  color: white;
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-  line-height: 2em;
-  padding: 3rem;
-  height: 70vh;
-  margin: 0;
-  display: flex;
-  .desc-wrapper {
-    margin: auto;
-    box-sizing: border-box;
-  }
-  .season--title {
-    text-align: center;
-    font-size: 4rem;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    margin: 20px 0;
-  }
-  .season--about {
-    margin-top: 50px;
-    padding: 0;
-  }
-}
-@media (max-width: 998px) and (orientation: portrait) {
-  .season-desc {
-    padding: 1.5rem 20px;
-    font-size: 1rem;
-    height: unset;
-    min-height: 70vh;
-    .season-title {
-      font-size: 2.5rem;
-      margin: 20px 0;
-      letter-spacing: unset;
+.container {
+  height: $view-width;  
+  width: $view-height;
+  transform: rotate(-90deg) translateX(-100%);
+  transform-origin: left top;
+  overflow-x: hidden;
+  overflow-y: auto;
+    
+    .sub-container {
+      transform: rotate(90deg) translateY(-100%);
+      transform-origin: left top;
+      white-space: nowrap;
+      
+      .child {
+        width: $view-width;
+        height: $view-height;
+        display: inline-flex;
+        vertical-align:top;
+        align-items: center;
+        justify-content: center;
+        white-space: break-spaces;
+        text-align: center;
+        // border: 100px solid pink;
+      }
+      
+      @media only screen and (max-width: 768px) {
+        // .child {
+        //   // border: 50px solid pink;
+        // }
+      }
     }
-    .season-about {
-      margin-top: 20px;
-    }
-  }
 }

@@ -21,7 +21,7 @@
 }
 .profile-card:hover {
   border-radius: 10px;
-  height: 400px;
+  height: 470px;
 }
 .profile-card .img {
   position: relative;
@@ -44,7 +44,7 @@
 }
 .caption {
   text-align: center;
-  transform: translateY(-80px);
+  transform: translateY(-155px);
   opacity: 0;
   transition: 0.6s;
 }
@@ -59,7 +59,7 @@
   font-size: 15px;
   color: #0c52a1;
   font-family: sans-serif;
-  margin: 2px 0 9px 0;
+  margin: 20px 0 20px 0;
 }
 .caption .social-links a {
   color: #333;
@@ -134,16 +134,20 @@ h1 {
     height: 290px;
   }
   .profile-card:hover {
-    height: 345px;
+    height: 400px;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    gap: 4rem;
+  }
   .profile-card {
-    height: 205px;
+    height: 362px;
   }
   .profile-card:hover {
-    height: 240px;
+    height: 460px;
   }
 }
 
@@ -156,11 +160,11 @@ h1 {
     padding-top: 2rem;
   }
   .profile-card {
-    height: 280px;
-    width: 280px;
+    height: 350px;
+    width: 350px;
   }
   .profile-card:hover {
-    height: 297px;
+    height: 458px;
   }
 }
 
@@ -215,3 +219,4 @@ h1 {
     padding: 10px 30px;
   }
 }
+
