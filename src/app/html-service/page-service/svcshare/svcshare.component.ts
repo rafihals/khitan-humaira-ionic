@@ -9,9 +9,25 @@ import { ModalShareOneComponent } from '../../modal/modal-share-page/modal-share
 })
 export class SvcshareComponent implements OnInit {
 
+  likeCount = 0;
+  isLiked = false;
+
+  private localStorageKey = 'likeCount';
+
+  onLike(): void {
+    this.likeCount++;
+    this.isLiked = !this.isLiked;
+    localStorage.setItem(this.localStorageKey, this.likeCount.toString());
+    console.log(`Tombol hati diklik sebanyak ${this.likeCount} kali`);
+  }
+
   isModalOpen = false;
 
   ngOnInit() {
+    const savedLikeCount = localStorage.getItem(this.localStorageKey);
+    if (savedLikeCount) {
+      this.likeCount = parseInt(savedLikeCount, 10);
+    }
   }
 
   ngAfterViewInit() {

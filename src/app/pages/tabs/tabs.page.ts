@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angula
 import { Router, NavigationEnd } from '@angular/router';
 import { IonTabs } from '@ionic/angular';
 import { filter } from 'rxjs';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-tabs',
@@ -15,17 +16,17 @@ export class TabsPage implements OnInit, AfterViewInit {
   @ViewChild('menuIndicator') menuIndicator!: ElementRef;
   isLandingPage: boolean = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private titleService: Title) {
     this.router.events.pipe(
       filter((event: NavigationEnd) => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
       const navEndEvent = event as NavigationEnd;
       this.checkUrl(navEndEvent.urlAfterRedirects);
+      this.updateTitle(navEndEvent.urlAfterRedirects); // Update title saat URL berubah
     });
   }
 
   ngOnInit(): void {
-    // No need to initialize here since it's handled in ngAfterViewInit
     this.isLandingPage = false;
   }
 
@@ -102,5 +103,16 @@ export class TabsPage implements OnInit, AfterViewInit {
       });
       target.classList.add('sc-current');
     }
+  }
+
+  updateTitle(url: string) {
+    let pageTitle = 'Khitan Humaira'; // Default title
+
+    if (url.includes('/home')) pageTitle = 'Home - Khitan Humaira';
+    else if (url.includes('/service')) pageTitle = 'Service - Khitan Humaira';
+    else if (url.includes('/share')) pageTitle = 'Share - Khitan Humaira';
+    else if (url.includes('/testimonial')) pageTitle = 'Testimonial - Khitan Humaira';
+
+    this.titleService.setTitle(pageTitle);
   }
 }

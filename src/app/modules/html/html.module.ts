@@ -29,6 +29,8 @@ import { SosmedComponent } from '../../html-service/section/sosmed/sosmed.compon
 import { SosmedtwoComponent } from '../../html-service/section/sosmedtwo/sosmedtwo.component';
 import { SosmedthreeComponent } from '../../html-service/section/sosmedthree/sosmedthree.component';
 import { TitletwoComponent } from '../../html-service/layout/titletwo/titletwo.component';
+import { MapsComponent } from '../../html-service/section/maps/maps.component';
+import { TitlethreeComponent } from '../../html-service/layout/titlethree/titlethree.component';
 @NgModule({
   declarations: [
     FooterComponent,
@@ -58,7 +60,9 @@ import { TitletwoComponent } from '../../html-service/layout/titletwo/titletwo.c
     SosmedComponent,
     SosmedtwoComponent,
     SosmedthreeComponent,
-    TitletwoComponent
+    TitletwoComponent,
+    MapsComponent,
+    TitlethreeComponent
   ],
   imports: [
     CommonModule,
@@ -91,7 +95,9 @@ import { TitletwoComponent } from '../../html-service/layout/titletwo/titletwo.c
     SosmedComponent,
     SosmedtwoComponent,
     SosmedthreeComponent,
-    TitletwoComponent
+    TitletwoComponent,
+    MapsComponent,
+    TitlethreeComponent
   ],
 })
 export class HtmlModule { }
