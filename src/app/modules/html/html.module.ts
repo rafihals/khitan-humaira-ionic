@@ -18,19 +18,19 @@ import { SvctestimonialComponent } from '../../html-service/page-service/svctest
 import { ModalbottomsheetComponent } from '../../html-service/modal/modal-template/modalbottomsheet/modalbottomsheet.component';
 import { ModalfullsheetComponent } from '../../html-service/modal/modal-template/modalfullsheet/modalfullsheet.component';
 import { ModalShareOneComponent } from '../../html-service/modal/modal-share-page/modal-share-one/modal-share-one.component';
-import { TitleComponent } from '../../html-service/layout/title/title.component';
+import { TitleComponent } from '../../html-service/section/titlepage/titleone/title.component';
 import { OurteamComponent } from '../../html-service/section/ourteam/ourteam.component';
 import { ArticlehomeComponent } from '../../html-service/section/articlehome/articlehome.component';
 import { OurserviceComponent } from '../../html-service/section/ourservice/ourservice.component';
 import { PophoverComponent } from '../../html-service/modal/modal-home-page/pophover/pophover.component';
-import { ParallaxComponent } from '../../html-service/section/parallax/parallax.component';
-import { ParallaxsecondComponent } from '../../html-service/section/parallaxsecond/parallaxsecond.component';
-import { SosmedComponent } from '../../html-service/section/sosmed/sosmed.component';
-import { SosmedtwoComponent } from '../../html-service/section/sosmedtwo/sosmedtwo.component';
-import { SosmedthreeComponent } from '../../html-service/section/sosmedthree/sosmedthree.component';
-import { TitletwoComponent } from '../../html-service/layout/titletwo/titletwo.component';
+import { ParallaxComponent } from '../../html-service/section/parallaxs/parallax/parallax.component';
+import { ParallaxsecondComponent } from '../../html-service/section/parallaxs/parallaxsecond/parallaxsecond.component';
+import { SosmedComponent } from '../../html-service/section/sosmeds/sosmed/sosmed.component';
+import { SosmedtwoComponent } from '../../html-service/section/sosmeds/sosmedtwo/sosmedtwo.component';
+import { SosmedthreeComponent } from '../../html-service/section/sosmeds/sosmedthree/sosmedthree.component';
 import { MapsComponent } from '../../html-service/section/maps/maps.component';
-import { TitlethreeComponent } from '../../html-service/layout/titlethree/titlethree.component';
+import { TitlethreeComponent } from '../../html-service/section/titlepage/titlethree/titlethree.component';
+import { TitletwoComponent } from '../../html-service/section/titlepage/titletwo/titletwo.component';
 @NgModule({
   declarations: [
     FooterComponent,

@@ -1,5 +1,4 @@
-function tes(){
-    console.log('tes');
+function tes() {
     const swiper = new Swiper('.swiper', {
         autoHeight: true,
         loop: true,
@@ -12,6 +11,5 @@ function tes(){
             prevEl: '.swiper-button-prev',
         },
     });
-
     return swiper;
 }

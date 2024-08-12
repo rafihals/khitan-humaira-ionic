@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500&display=swap');
+
+// * {
+//   margin: 0;
+//   box-sizing: border-box;
+//   font-family: 'Saira Condensed', sans-serif;
+//   color: #ea8787;
+// }
+
+$view-height: 70vh;
+$view-width: 100vw;
+
+body {
+  overflow-y: hidden;
+  height: $view-height;
+}
+
+.container {
+  height: $view-width;  
+  width: $view-height;
+  transform: rotate(-90deg) translateX(-100%);
+  transform-origin: left top;
+  overflow-x: hidden;
+  overflow-y: auto;
+    
+    .sub-container {
+      transform: rotate(90deg) translateY(-100%);
+      transform-origin: left top;
+      white-space: nowrap;
+      
+      .child {
+        width: $view-width;
+        height: $view-height;
+        display: inline-flex;
+        vertical-align:top;
+        align-items: center;
+        justify-content: center;
+        white-space: break-spaces;
+        text-align: center;
+        // border: 100px solid pink;
+      }
+      
+      @media only screen and (max-width: 768px) {
+        // .child {
+        //   // border: 50px solid pink;
+        // }
+      }
+    }
+}
