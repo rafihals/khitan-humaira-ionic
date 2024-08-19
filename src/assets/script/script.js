@@ -1,7 +1,9 @@
 function tes() {
     const swiper = new Swiper('.swiper', {
-        autoHeight: true,
+        autoHeight: false,
         loop: true,
+        speed: 800,
+        effect: 'slide',
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
