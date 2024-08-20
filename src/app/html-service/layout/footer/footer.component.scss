@@ -1,6 +1,7 @@
 .footer {
   background-color: #000000;
   width: 100%;
+  border-radius: 20px;
   text-align: left;
   font-family: sans-serif;
   font-weight: bold;
@@ -44,11 +45,11 @@
 
 .footer .icons a {
   display: inline-block;
-  width: 35px;
+  width: 65px;
   height: 35px;
   cursor: pointer;
   background-color: white;
-  border-radius: 2px;
+  border-radius: 50px;
   font-size: 20px;
   color: #33383b;
   text-align: center;

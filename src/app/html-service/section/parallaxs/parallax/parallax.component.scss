@@ -99,3 +99,12 @@ h2 {
     }
   }
 }
+
+@media (max-width:768px) {
+  .season--about {
+    font-size: 18px !important;
+  }
+  .season--title {
+    font-size: 2rem !important;
+  }
+}

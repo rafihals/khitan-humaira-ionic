@@ -17,13 +17,25 @@
   <section class="features" id="features">
     <div class="container">
       <div class="url-shorten-feature">
-        <form class="url-shorten-form" id="url-shorten-form">
+        <form class="url-shorten-form" id="url-shorten-form" [formGroup]="subscriptionForm" (ngSubmit)="onSubscribe()">
           <div>
-            <input type="email" class="url-input" placeholder="Langganan sekarang..." autocomplete="off" />
-            <span class="alert"></span>
+            <input 
+              type="email" 
+              formControlName="email" 
+              class="url-input" 
+              placeholder="Langganan sekarang..." 
+              autocomplete="off" 
+              required 
+            />
+            <span class="alert" *ngIf="emailControl.invalid && emailControl.touched">
+              Email tidak valid
+            </span>
           </div>
-          <button type="submit" class="btn btn-lg btn-plus-icon">Subscribe</button>
+          <button type="submit" class="btn btn-lg btn-plus-icon" [disabled]="subscriptionForm.invalid">
+            Subscribe
+          </button>
         </form>
+        
         <div class="url-shorten-results"></div>
       </div>
       <div class="more-features">

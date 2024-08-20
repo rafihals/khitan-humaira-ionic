@@ -154,3 +154,13 @@ img {
   font-size: 16px;
   line-height: 1.7;
 }
+
+@media (max-width: 768px) {
+  .article-title h3 {
+    font-size: 1rem !important;
+  }
+  .article-description p {
+    font-size: 14px !important;
+  }
+  
+}

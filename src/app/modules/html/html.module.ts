@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 import { FooterComponent } from './../../html-service/layout/footer/footer.component';
 import { HeaderComponent } from './../../html-service/layout/header/header.component';
 import { LoaderComponent } from './../../html-service/layout/loader/loader.component';
@@ -66,7 +68,9 @@ import { TitletwoComponent } from '../../html-service/section/titlepage/titletwo
   ],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [FooterComponent,
     HeaderComponent,
