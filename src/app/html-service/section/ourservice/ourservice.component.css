@@ -151,3 +151,10 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+article {
+  background-image: url("/assets/icon/liqp.png");
+  background-repeat: no-repeat;
+  background-size: 500px;
+  background-position: bottom left;
+}

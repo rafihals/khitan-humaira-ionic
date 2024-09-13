@@ -27,8 +27,9 @@
               autocomplete="off" 
               required 
             />
-            <span class="alert" *ngIf="emailControl.invalid && emailControl.touched">
-              Email tidak valid
+            <span *ngIf="emailControl.invalid && emailControl.touched" class="warning">
+              <ng-container *ngIf="emailControl.hasError('required')">Email diperlukan!</ng-container>
+              <ng-container *ngIf="emailControl.hasError('email') && !emailControl.hasError('required')">Email tidak valid!</ng-container>
             </span>
           </div>
           <button type="submit" class="btn btn-lg btn-plus-icon" [disabled]="subscriptionForm.invalid">

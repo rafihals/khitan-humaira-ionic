@@ -9,6 +9,57 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+.toast-green-blue {
+  --background: linear-gradient(to right, #4caf50, #2196f3);
+  color: white;
+}
+
+.toast-red-orange {
+  --background: linear-gradient(to right, #fca606, yellow);
+  color: white;
+}
+
+.toast-facebook {
+  --background: linear-gradient(to right, #2259d1, #8b9dc3);
+  color: white;
+}
+
+.toast-mail {
+  --background: linear-gradient(
+    90deg,
+    #4285f4 0%,
+    #db4437 25%,
+    #f4b400 50%,
+    #0f9d58 75%,
+    #db4437 100%
+  );
+  color: white;
+}
+
+.toast-twitter {
+  --background: linear-gradient(to right, #1da1f2, #1da1f2);
+  color: white;
+}
+
+.toast-instagram {
+  --background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  color: black;
+  font-size: 15px;
+  font-family: "Roboto";
+}
+
+.toast-wa {
+  --background: linear-gradient(to right, #25d366, #128c7e);
+  color: white;
+}
+
 html {
   scroll-behavior: smooth;
 }
