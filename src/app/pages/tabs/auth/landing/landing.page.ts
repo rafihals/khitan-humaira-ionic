@@ -69,7 +69,7 @@ export class LandingPage implements OnInit {
   onClickIg(): void {
     this.presentToastIg();
     setTimeout(() => {
-      window.open('https://www.instagram.com/', '_blank');
+      window.open('https://www.instagram.com/griya.khitanhumaira/', '_blank');
     }, 1500);
   }
 
